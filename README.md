@@ -1,119 +1,108 @@
-# 👗 Loja Meteora - Front-End Desafio 7
+![Social Preview](https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/6d59c246-4529-460f-9cd5-a2d00768b768#vitrinedev)
 
-Projeto do 7 desafio de Front-End da Alura, <a href="https://www.alura.com.br/challenges/front-end-7">material do desafio</a>.
+<h1 align="center"> 👗 Loja Meteora - Front-End Desafio 7 👗 </h1>
 
-Nesse Challenger, o projeto foi um e-commerce de roupas, com opção de se inscrever no newsletter e ver mais sobre os produtos.
+![Vercel Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)
+![GitHub release](https://img.shields.io/github/v/release/Epiled/meteora?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/Epiled/meteora?style=for-the-badge)
 
-Além de desenvolver os componentes da página, foi garantindo que o site seja inclusivo, por isso, foi essencial pensar em todos os detalhes.
+![GitHub last commit](https://img.shields.io/github/last-commit/Epiled/meteora?style=for-the-badge)
+![Code Size](https://img.shields.io/github/languages/code-size/Epiled/meteora?style=for-the-badge)
 
-| :placard: Vitrine.Dev |     |
-| -------------  | --- |
-| :sparkles: Nome        | **Loja Meteora - Front-End Desafio 7**
-| :label: Tecnologias | html, css, js, node, gulp, json-server
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Gulp](https://img.shields.io/badge/Gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node\.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-<!-- Inserir imagem com a #vitrinedev ao final do link -->
-![thumb-meteora](https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/6d59c246-4529-460f-9cd5-a2d00768b768#vitrinedev)
+## 📑 Table of Contents
 
-<h2 id="detalhes-do-projeto"> 📃 Detalhes do projeto </h2>
+- [📑 Table of Contents](#-table-of-contents)
+- [📖 Overview](#-overview)
+- [🛠️ Technologies](#-technologies)
+- [⚡ Performance & PWA](#-performance--pwa)
+- [🚀 Demo](#-demo)
+- [📦 Install and Use](#-install-and-use)
+- [📂 File Structure](#-file-structure)
+- [🎨 Reference & Inspiration](#-reference--inspiration)
+- [👨‍💻 Author and Contact](#%E2%80%8D-author-and-contact)
 
-Nesse projeto foi desenvolvido um e-commerce de roupas, é possível visualizar os produtos em detalhes em uma modal, também é possível se cadastrar no newsletter sendo necessário coloca rum e-mail valido.
+## 📖 Overview
 
-A ideia do Challenger foi desenvolver todo o projeto em um período de 4 semanas.
+Meteora Store is a responsive fashion e-commerce platform designed to showcase products through a modern and accessible shopping experience.
 
-Todo o código foi desenvolvido em códigos Vanilla sem frameworks sendo a única dependência o JSON-Server para consumir a API com todos os dados dos produtos.
+Users can browse the catalog, explore product details through modal interfaces, and subscribe to a newsletter with built-in form validation. The project prioritizes accessibility, responsive layouts, and user-friendly interactions across desktop and mobile devices.
 
-![Badge](https://img.shields.io/github/last-commit/Epiled/meteora-front-end-desafio-7?style=for-the-badge)
-![Badge](https://img.shields.io/github/languages/code-size/Epiled/meteora-front-end-desafio-7?style=for-the-badge)
-![Badge](https://img.shields.io/github/languages/count/Epiled/meteora-front-end-desafio-7?style=for-the-badge)
-![Bagde](https://img.shields.io/badge/repo%20status-Beta-cyan?style=for-the-badge)
-![Bagde](https://img.shields.io/github/v/release/Epiled/meteora-front-end-desafio-7?style=for-the-badge)
-![Bagde](https://img.shields.io/github/license/Epiled/meteora-front-end-desafio-7?style=for-the-badge)
+Built with HTML, CSS, and Vanilla JavaScript, the application consumes product data from a mock REST API provided by JSON Server, demonstrating core front-end development concepts without relying on external frameworks.
 
-![Badge](https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Badge](https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Badge](https://img.shields.io/badge/-JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Badge](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Badge](https://img.shields.io/badge/-Gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
-![Badge](https://img.shields.io/badge/-JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+## 🛠 Technologies
 
-<h2> 📑 Tabela de Conteúdos </h2>
+The following technologies were used to build this project:
 
-<!--ts-->
-   * [Detalhes do projeto](#detalhes-do-projeto)
-   * [Tópicos Desenvolvidos](#topicos-curso)
-   * [Demonstração](#demonstracao)
-     - [Home](#home)
-   * [Pré-Requisito](#pre-requisito)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-   * [Tecnologias](#tecnologias)
-   * [Autor](#autor)
-<!--te-->
+- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Gulp](https://gulpjs.com/)
+- [Node.js](https://nodejs.org/pt-br)
+- [JSON](https://www.npmjs.com/package/json-server)
 
-<h2 id="topicos-curso"> 👩‍🏫 Tópicos desenvolvidos</h2>
+## ⚡ Performance & PWA
 
-<!--ts-->
-* Desenvolvimento responsivo
-* Acessibilidade Web
-* Consumo de API
-* Validação de formulário
-* Otimizações de SEO
-<!--te-->
+<!-- ![Lighthouse Performance](./design/github/lighthouse-report-dark.png) -->
 
-<h2 id="demonstracao"> 👀 Demonstração </h2>
+Comming Soon!
 
-<h3 id="home"> Home </h3>
+## 🚀 Demo
 
-https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/d38e03a5-1f01-4aa0-afc4-885ff8e58982
+Access the live application below to interact with the interface and run your own performance tests
 
-https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/b3bf5d0b-b58c-4815-845f-f8a0835e5100
+Meteora: [https://meteora-pearl.vercel.app/](https://meteora-pearl.vercel.app/)
 
-<h2 id="pre-requisito"> 🚨 Pré-requisito </h2>
-<ul>
-  <li>Node</li>
-  <li>JSON-Server</li>
-</ul>
+#### Desktop
+[desktop.webm](https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/d38e03a5-1f01-4aa0-afc4-885ff8e58982)
 
-<h2 id="instalacao"> ⚙ Instalação </h2>
+#### Mobile
+[mobile.webm](https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/b3bf5d0b-b58c-4815-845f-f8a0835e5100)
 
+## 📦 Install and Use
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Epiled/meteora.git
+cd meteora
 ```
-1. git clone https://github.com/Epiled/meteora-desafio-front-end-7.git
-2. cd meteora-desafio-front-end-7
-3. npm install
+2. Install the dependencies:
+```bash
+npm install
 ```
 
-<h2 id="como-usar"> 👩‍🏫 Como usar </h2>
-
+3. Start the Mock Database:
+Navigate to the `db` directory and initialize the local JSON server. *(Note: prefixing with `npx` ensures it runs even if not installed globally).*
+```bash
+cd db
+npx json-server --watch db.json
 ```
-1. Estando dentro do diretório do meteora-desafio-front-end-7 utilize o seguinte comando
-2. json-server --watch db.json
-3. Levante um servidor local para a pasta meteora-desafio-front-end-7 e acesse a index.html
-```
 
-<h2 id="tecnologias"> 🛠 Tecnologias </h2>
+## 📂 File Structure
 
-As seguintes tecnologias foram usadas na construção deste projeto:
+Comming Soon!
 
-<ul>
-  <li><a href="https://www.w3schools.com/html/default.asp" target="_blank">HTML5</a></li>
-  <li><a href="https://www.w3schools.com/css/default.asp" target="_blank">CSS3</a></li>
-  <li><a href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a></li>
-  <li><a href="https://nodejs.org/en" target="_blank">Node.js</a></li>
-  <li><a href="https://gulpjs.com/" target="_blank">Gulp</a></li>
-  <li><a href="https://www.npmjs.com/package/json-server" target="_blank">JSON-Server</a></li>
-</ul>
+## 🎨 Reference & Inspiration
 
-<h2 id="autor"> 👨‍💻 Autor </h2>
+The project's design and wireframes are available for viewing on Figma. Below is a list of the real-world examples that inspired the UI/UX design.
+
+Figma / Wireframe: [Meteora](https://www.figma.com/design/M2sLzmrTpN8S24OmBzFQlK/Challenge-Front-end-%7C-Loja-Meteora--Copy-?node-id=2386-2430&t=1Cc7HQRu9xzPCVc4-1)
+
+## 👨‍💻 Author and Contact
 
 <a href="https://github.com/Epiled">
+  <img src="https://user-images.githubusercontent.com/55258483/178338085-2cea8bf2-6d0c-409a-9d0e-23359b7d303e.png" alt="Felindo">
+  <br />
+  <sub><b>Felipe De Andrade</b></sub>
+</a>
 
-![Felindo](https://user-images.githubusercontent.com/55258483/178338085-2cea8bf2-6d0c-409a-9d0e-23359b7d303e.png)
- <br />
- <sub><b>Felipe De Andrade</b></sub></a>
+Made with ❤️ by Felipe De Andrade 👋🏽 Get in touch!
 
-Feito com ❤️ por Felipe De Andrade 👋🏽 Entre em contato!
-
-[![Linkedin Badge](https://img.shields.io/badge/-Felipe-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fademendonca/)](https://www.linkedin.com/in/fademendonca/)
-[![Gmail Badge](https://img.shields.io/badge/-felipe.deam98@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:felipe.deam98@gmail.com)](mailto:felipe.deam98@gmail.com)
-[![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white&link=https://www.instagram.com/felipe.deam/)](https://www.instagram.com/felipe.deam/)
-[![Codepen Badge](https://img.shields.io/badge/-Codepen-000000?style=flat-square&logo=Codepen&logoColor=white&link=https://codepen.io/epiled)](https://codepen.io/epiled)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/fademendonca/)
+[![CodePen](https://img.shields.io/badge/CodePen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/epiled)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:felipe.deam98@gmail.com)
