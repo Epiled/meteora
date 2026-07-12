@@ -56,7 +56,7 @@ Comming Soon!
 
 Access the live application below to interact with the interface and run your own performance tests
 
-Meteora: [https://meteora-pearl.vercel.app/](https://meteora-pearl.vercel.app/)
+Meteora: [https://meteora-sooty-seven.vercel.app/](https://meteora-sooty-seven.vercel.app/)
 
 #### Desktop
 [desktop.webm](https://github.com/Epiled/Front-End-Desafio-7/assets/55258483/d38e03a5-1f01-4aa0-afc4-885ff8e58982)
@@ -85,7 +85,7 @@ npx json-server --watch db.json
 
 ## 📂 File Structure
 
-Comming Soon!
+Coming Soon!
 
 ## 🎨 Reference & Inspiration
 
