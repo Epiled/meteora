@@ -1,0 +1,5 @@
+.footer {
+  background-color: var(--color-brand-primary);
+  padding: 1.7rem 2.3rem;
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+.banner__arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 24%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .banner__arrows {
+    width: calc(100% - 9%);
+  }
+}

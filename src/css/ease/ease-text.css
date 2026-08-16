@@ -1,0 +1,6 @@
+.ease__text {
+  color: var(--color-surface-base);
+  font-size: 1.3rem;
+  margin-top: 1.6rem;
+  line-height: 2rem;
+}

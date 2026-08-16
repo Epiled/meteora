@@ -1,0 +1,16 @@
+.modal__button {
+  width: fit-content;
+  padding: 0.9rem 1.6rem;
+  background-color: var(--color-brand-secondary);
+  color: var(--color-surface-base);
+  border: 0;
+  font-size: 1.6rem;
+  line-height: normal;
+  letter-spacing: 0.0457rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.modal__button:hover {
+  background-color: var(--color-brand-secondary-hover);
+}

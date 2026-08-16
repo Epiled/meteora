@@ -1,0 +1,4 @@
+.modal__title {
+  color: var(--color-surface-base);
+  font-size: 2rem;
+}

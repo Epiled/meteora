@@ -1,0 +1,14 @@
+.modal__body {
+  background-color: var(--color-surface-base);
+  padding: 1.6rem 1.6rem 3.2rem 1.6rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.4rem 1.5rem 0 var(--color-shadow-base);
+  color: var(--color-text-heading);
+}
+
+@media screen and (min-width: 768px) {
+  .modal__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

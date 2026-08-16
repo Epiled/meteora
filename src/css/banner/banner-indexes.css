@@ -1,0 +1,6 @@
+.banner__indexes {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translate(-50%, 50%);
+}

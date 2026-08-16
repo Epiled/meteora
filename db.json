@@ -1,136 +1,136 @@
 {
-  "produtos": [
+  "products": [
     {
       "id": 1,
-      "titulo": "Camiseta Conforto",
-      "descricao": "Multicores e tamanhos. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
-      "preco": "70,00",
-      "imagem": "card-camiseta.png",
+      "title": "Camiseta Conforto",
+      "description": "Multicores e sizes. Tecido de algodão 100%, fresquinho para o verão. Modelagem unissex.",
+      "price": "70,00",
+      "image": "card-camiseta.png",
       "cores": [
         {
-          "corNome": "Mostarda",
-          "corHash": "#F9A711"
+          "name": "Mostarda",
+          "hash": "#F9A711"
         }, {
-          "corNome": "Offwhite",
-          "corHash": "#F3F6F7"
+          "name": "Offwhite",
+          "hash": "#F3F6F7"
         }, {
-          "corNome": "Preto",
-          "corHash": "#000"
+          "name": "Preto",
+          "hash": "#000"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "P", "PP", "M", "G", "GG"
       ],
-      "categoria": "camisetas"
+      "category": "camisetas"
     },
         {
       "id": 2,
-      "titulo": "Calça Alfaiataria",
-      "descricao": "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
-      "preco": "180,00",
-      "imagem": "card-calca.png",
+      "title": "Calça Alfaiataria",
+      "description": "Modelo Wide Leg alfaiataria em linho. Uma peça pra vida toda!",
+      "price": "180,00",
+      "image": "card-calca.png",
       "cores": [
         {
-          "corNome": "Azul Claro",
-          "corHash": "#75D7F0"
+          "name": "Azul Claro",
+          "hash": "#75D7F0"
         }, {
-          "corNome": "Light Pink",
-          "corHash": "#F9EAD3"
+          "name": "Light Pink",
+          "hash": "#F9EAD3"
         }, {
-          "corNome": "Preto",
-          "corHash": "#000"
+          "name": "Preto",
+          "hash": "#000"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "38", "40", "42", "44", "46"
       ],
-      "categoria": "calcas"
+      "category": "calcas"
     },
     {
       "id": 3,
-      "titulo": "Tênis Chunky",
-      "descricao": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
-      "preco": "250,00",
-      "imagem": "card-tenis.png",
+      "title": "Tênis Chunky",
+      "description": "Snicker casual com solado mais alto e modelagem robusta. Modelo unissex.",
+      "price": "250,00",
+      "image": "card-tenis.png",
       "cores": [
         {
-          "corNome": "Azul Claro",
-          "corHash": "#75D7F0"
+          "name": "Azul Claro",
+          "hash": "#75D7F0"
         }, {
-          "corNome": "Offwhite",
-          "corHash": "#F3F6F7"
+          "name": "Offwhite",
+          "hash": "#F3F6F7"
         }, {
-          "corNome": "Preto",
-          "corHash": "#000"
+          "name": "Preto",
+          "hash": "#000"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "36", "38", "40"
       ],
-      "categoria": "calcados"
+      "category": "calcados"
     },
     {
       "id": 4,
-      "titulo": "Jaqueta Jeans",
-      "descricao": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
-      "preco": "150,00",
-      "imagem": "card-jaqueta-jeans.png",
+      "title": "Jaqueta Jeans",
+      "description": "Modelo unissex oversized com gola de camurça. Atemporal e autêntica!",
+      "price": "150,00",
+      "image": "card-jaqueta-jeans.png",
       "cores": [
         {
-          "corNome": "Jeans",
-          "corHash": "#62AEE1"
+          "name": "Jeans",
+          "hash": "#62AEE1"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "P", "M", "G"
       ],
-      "categoria": "casacos"
+      "category": "casacos"
     },
     {
       "id": 5,
-      "titulo": "Óculos Redondo",
-      "descricao": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
-      "preco": "120,00",
-      "imagem": "card-oculos.png",
+      "title": "Óculos Redondo",
+      "description": "Armação metálica em grafite com lentes arredondadas. Sem erro!",
+      "price": "120,00",
+      "image": "card-oculos.png",
       "cores": [
         {
-          "corNome": "Prata",
-          "corHash": "#C0C0C0"
+          "name": "Prata",
+          "hash": "#C0C0C0"
         }, {
-          "corNome": "Dourado",
-          "corHash": "#FFD700"
+          "name": "Dourado",
+          "hash": "#FFD700"
         }, {
-          "corNome": "Preto",
-          "corHash": "#000"
+          "name": "Preto",
+          "hash": "#000"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "Infantil", "Adulto"
       ],
-      "categoria": "oculos"
+      "category": "oculos"
     },
     {
       "id": 6,
-      "titulo": "Bolsa coringa",
-      "descricao": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
-      "preco": "120,00",
-      "imagem": "card-bolsa.png",
+      "title": "Bolsa coringa",
+      "description": "Bolsa camel em couro sintético de alta duração. Ideal para acompanhar você por uma vida!",
+      "price": "120,00",
+      "image": "card-bolsa.png",
       "cores": [
         {
-          "corNome": "Bege Escuro",
-          "corHash": "#CF9680"
+          "name": "Bege Escuro",
+          "hash": "#CF9680"
         }, {
-          "corNome": "Branco",
-          "corHash": "#FFF"
+          "name": "Branco",
+          "hash": "#FFF"
         }, {
-          "corNome": "Preto",
-          "corHash": "#000"
+          "name": "Preto",
+          "hash": "#000"
         }
       ],
-      "tamanhos": [
+      "sizes": [
         "Único"
       ],
-      "categoria": "bolsas"
+      "category": "bolsas"
     }
   ]
 }

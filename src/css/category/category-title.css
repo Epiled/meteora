@@ -1,0 +1,7 @@
+.category__title {
+  background-color: var(--color-brand-primary);
+  color: var(--color-surface-base);
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 0.8rem 1.6rem;
+}

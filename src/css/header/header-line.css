@@ -1,0 +1,20 @@
+.header__line {
+  display: inline-block;
+  width: 1.8rem;
+  height: 0.3rem;
+  background: var(--cor-logo);
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.header__line[data-toggle-line-active]:nth-child(1) {
+  transform: translateY(0.6rem) rotate(45deg);
+}
+
+.header__line[data-toggle-line-active]:nth-child(2) {
+  opacity: 0;
+}
+
+.header__line[data-toggle-line-active]:nth-child(3) {
+  transform: translateY(-0.6rem) rotate(-45deg);
+}

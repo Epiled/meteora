@@ -1,0 +1,26 @@
+.header__link {
+  font-size: 1.6rem;
+  color: var(--color-surface-base);
+  text-decoration: none;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.1rem solid var(--color-surface-base);
+}
+
+.header__link:focus,
+.header__link:hover {
+  color: var(--color-brand-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .header__link {
+    border: none;
+    padding: 0;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header__link {
+    font-size: 1.6rem;
+  }
+}

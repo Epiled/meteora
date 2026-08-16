@@ -1,0 +1,7 @@
+.product {
+  color: var(--color-text-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.3rem;
+  border: 0.1rem solid var(--color-shadow-subtle);
+}

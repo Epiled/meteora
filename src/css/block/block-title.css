@@ -1,0 +1,23 @@
+.block__title {
+  color: var(--color-text-heading);
+  font-size: 2.8rem;
+  text-align: center;
+  line-height: normal;
+}
+
+.block__title--alt {
+  color: var(--color-surface-base);
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block__title--alt {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .block__title {
+    font-size: 3.2rem;
+  }
+}

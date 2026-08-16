@@ -1,5 +1,5 @@
 .modal__legend {
-  color: var(--cor-titulo);
+  color: var(--color-text-heading);
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 2rem;

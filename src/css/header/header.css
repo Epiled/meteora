@@ -1,0 +1,14 @@
+.header {
+  background: var(--color-brand-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1rem 2.3rem 1rem 2.3rem;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,13 @@
+.modal__label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-left: 1.6rem;
+  align-items: center;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+.modal__label:first-of-type {
+  margin-left: 0;
+}

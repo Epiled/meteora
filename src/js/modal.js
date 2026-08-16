@@ -1,94 +1,101 @@
+import { productService } from "../app/productService.js";
 
-import { conectaApi } from "../app/conectaApi.js";
+const product = await productService.listProducts;
+const modals = [...document.querySelectorAll("[data-modal]")];
 
-const produtos = await conectaApi.listaDeProdutos;
-const modals = [...document.querySelectorAll('[data-modal]')];
-
-const modalTipo = {
-  produto: modals.find(item => item.dataset.modal === 'produto'),
-  newsletter: modals.find(item => item.dataset.modal === 'newsletter'),
+const modalType = {
+  product: modals.find((item) => item.dataset.modal === "product"),
+  newsletter: modals.find((item) => item.dataset.modal === "newsletter"),
 };
 
-modals.forEach(modal => {
-  modal.addEventListener('click', (e) => {
-    fechaModal(e.target, modal);
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    closeModal(e.target, modal);
   });
 });
 
-function fechaModal(btn, modal) {
-  if (btn.hasAttribute('data-modal-fechar') || btn.parentNode.hasAttribute('data-modal-fechar')) {
-    modal.dataset.estado = '';
-  };
+function closeModal(btn, modal) {
+  if (
+    btn.hasAttribute("data-modal-close") ||
+    btn.parentNode.hasAttribute("data-modal-close")
+  ) {
+    modal.dataset.state = "";
+  }
 }
 
-function fechaModalsGeral(lista) {
-  lista.forEach(item => {
-    item.dataset.estado = '';
-  })
+function closeAllModals(list) {
+  list.forEach((item) => {
+    item.dataset.state = "";
+  });
 }
 
-async function ativaModal() {
-  fechaModalsGeral(modals);
-  const alvo = this.dataset.modalBtn;
-  const modal = modalTipo[alvo];
+async function activeModal() {
+  closeAllModals(modals);
+  const target = this.dataset.modalBtn;
+  const modal = modalType[target];
 
-  if (modalTipo[alvo].dataset.modal === 'produto') {
-    const produtoId = parseInt(this.dataset.id) - 1;
-    preencheModalProduto(modal, produtoId);
+  if (modalType[target].dataset.modal === "product") {
+    const productId = parseInt(this.dataset.id) - 1;
+    fillModalProduct(modal, productId);
     return;
   }
-  
-  modal.dataset.estado = "ativo";
 
+  modal.dataset.state = "active";
 }
 
-function criaCor(nome, cor) {
-  const label = document.createElement('label');
-  label.className = 'modal__etq';
+function createColor(nome, cor) {
+  const label = document.createElement("label");
+  label.className = "modal__label";
   label.for = nome;
   label.innerHTML = `
-        <input type="radio" name="colorChoose" id="${nome}" class="modal__ipt" style="background: ${cor};">
+        <input type="radio" name="colorChoose" id="${nome}" class="modal__input" style="background: ${cor};">
         ${nome}`;
 
   return label;
 }
 
-function criaTamanho(tamanho) {
-  const label = document.createElement('label');
-  label.className = 'modal__etq';
-  label.for = tamanho;
+function createSize(size) {
+  const label = document.createElement("label");
+  label.className = "modal__label";
+  label.for = size;
   label.innerHTML = `
-  <label for="${tamanho}" class="modal__etq">
-    <input type="radio" name="sizeChoose" id="${tamanho}" class="modal__ipt">
-    ${tamanho}
+  <label for="${size}" class="modal__label">
+    <input type="radio" name="sizeChoose" id="${size}" class="modal__input">
+    ${size}
   </label>
-  `
+  `;
 
   return label;
 }
 
-function preencheModalProduto(modal, produtoId) {
-  modal.dataset.estado = "ativo";
-  modal.querySelector('[data-imagem-desktop]').srcset = `./assets/images/Desktop/Imagens-cards/${produtos[produtoId].imagem}`;
-  modal.querySelector('[data-imagem-tablet]').srcset = `./assets/images/Tablet/Imagens-cards/${produtos[produtoId].imagem}`;
-  modal.querySelector('[data-imagem-mobile]').srcset = `./assets/images/Mobile/Imagens-cards/${produtos[produtoId].imagem}`;
-  modal.querySelector('[data-modal-produto]').textContent = produtos[produtoId].titulo;
-  modal.querySelector('[data-modal-descricao]').textContent = produtos[produtoId].descricao;
-  modal.querySelector('[data-modal-preco]').textContent = produtos[produtoId].preco;
+function fillModalProduct(modal, productId) {
+  modal.dataset.state = "active";
+  modal.querySelector("[data-image-desktop]").srcset =
+    `./assets/images/Desktop/Imagens-cards/${product[productId].image}`;
+  modal.querySelector("[data-image-tablet]").srcset =
+    `./assets/images/Tablet/Imagens-cards/${product[productId].image}`;
+  modal.querySelector("[data-image-mobile]").srcset =
+    `./assets/images/Mobile/Imagens-cards/${product[productId].image}`;
+  modal.querySelector("[data-modal-product]").textContent =
+    product[productId].title;
+  modal.querySelector("[data-modal-description]").textContent =
+    product[productId].description;
+  modal.querySelector("[data-modal-price]").textContent =
+    product[productId].price;
 
-  const campoCores = modal.querySelector('[data-modal-cores]');
-  campoCores.innerHTML = '';
-  produtos[produtoId].cores.forEach(cor => {
-    campoCores.appendChild(criaCor(cor.corNome, cor.corHash));
+  const fieldColors = modal.querySelector("[data-modal-colors]");
+  fieldColors.innerHTML = "";
+  product[productId].colors.forEach((color) => {
+    fieldColors.appendChild(createColor(color.name, color.hash));
   });
 
-  const campoTamanhos = modal.querySelector('[data-modal-tamanhos]');
-  campoTamanhos.innerHTML = '';
-  produtos[produtoId].tamanhos.forEach(tamanho => {
-    campoTamanhos.appendChild(criaTamanho(tamanho));
+  const fieldSizes = modal.querySelector("[data-modal-sizes]");
+  fieldSizes.innerHTML = "";
+  product[productId].sizes.forEach((size) => {
+    fieldSizes.appendChild(createSize(size));
   });
 }
 
 export const modal = {
-  ativaModal,
-}
+  activeModal,
+};

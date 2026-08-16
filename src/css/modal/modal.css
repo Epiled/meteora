@@ -9,10 +9,10 @@
   padding: 2.6rem;
   overflow: scroll;
   transform: translate(-50%, -50%) scale(0);
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
-.modal[data-estado="ativo"] {
+.modal[data-state="active"] {
   transform: translate(-50%, -50%) scale(1);
 }
 

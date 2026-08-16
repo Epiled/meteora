@@ -1,0 +1,6 @@
+.modal__price {
+  font-size: 2rem;
+  line-height: normal;
+  padding-top: 2.4rem;
+  border-top: 0.1rem solid var(--color-brand-primary);
+}

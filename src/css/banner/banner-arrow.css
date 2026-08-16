@@ -1,0 +1,9 @@
+.banner__arrow {
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+.banner__arrow--reverse {
+  transform: scaleX(-100%);
+}

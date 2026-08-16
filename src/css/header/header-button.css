@@ -1,0 +1,30 @@
+.header__button {
+  background-color: var(--color-surface-base);
+  color: var(--color-brand-primary);
+  border: 0.1rem solid var(--color-brand-primary);
+  padding: 0.9rem 1.2rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+.header__button:focus,
+.header__button:hover {
+  color: var(--color-surface-base);
+  background-color: var(--color-brand-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .header__button {
+    border-color: var(--color-surface-base);
+    background-color: var(--color-brand-primary);
+    color: var(--color-surface-base);
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header__button {
+    font-size: 1.5rem;
+  }
+}
