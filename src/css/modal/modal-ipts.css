@@ -1,9 +1,0 @@
-.modal__ipts {
-  padding-bottom: 1.6rem;
-  border-bottom: .1rem solid #D8D8D8;
-}
-
-.modal__ipts:last-of-type {
-  padding-bottom: 0;
-  border-bottom: 0;
-}

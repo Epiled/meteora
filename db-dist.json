@@ -21,7 +21,7 @@
       "tamanhos": [
         "P", "PP", "M", "G", "GG"
       ],
-      "categoria": "camisetas"
+      "category": "camisetas"
     },
         {
       "id": 2,
@@ -44,7 +44,7 @@
       "tamanhos": [
         "38", "40", "42", "44", "46"
       ],
-      "categoria": "calcas"
+      "category": "calcas"
     },
     {
       "id": 3,
@@ -67,7 +67,7 @@
       "tamanhos": [
         "36", "38", "40"
       ],
-      "categoria": "calcados"
+      "category": "calcados"
     },
     {
       "id": 4,
@@ -84,7 +84,7 @@
       "tamanhos": [
         "P", "M", "G"
       ],
-      "categoria": "casacos"
+      "category": "casacos"
     },
     {
       "id": 5,
@@ -107,7 +107,7 @@
       "tamanhos": [
         "Infantil", "Adulto"
       ],
-      "categoria": "oculos"
+      "category": "oculos"
     },
     {
       "id": 6,
@@ -130,7 +130,7 @@
       "tamanhos": [
         "Único"
       ],
-      "categoria": "bolsas"
+      "category": "bolsas"
     }
   ]
 }

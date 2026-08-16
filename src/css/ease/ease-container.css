@@ -1,0 +1,11 @@
+.ease__container {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .ease__container {
+    min-width: 30.4rem;
+  }
+}

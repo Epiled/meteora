@@ -1,0 +1,7 @@
+.modal__head {
+  background-color: var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8rem 2.6rem 1.8rem 1.6rem;
+}

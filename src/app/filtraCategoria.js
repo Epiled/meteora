@@ -1,21 +1,21 @@
-import { conectaApi } from "./conectaApi.js";
-import { criarProdutos } from "./criarProduto.js";
+import { productService } from "./productService.js";
+import { createProducts } from "./createProduct.js";
 
-const botoes = document.querySelectorAll('[data-categoria]');
+const buttons = document.querySelectorAll("[data-category]");
 
-botoes.forEach(btn => {
-  btn.addEventListener('click', filtrarProdutos);
-})
+buttons.forEach((btn) => {
+  btn.addEventListener("click", filterProducts);
+});
 
-async function filtrarProdutos() {
-  const categoria = this.dataset.categoria;
-  const filtrados = await filtrarPorcategoria(categoria);
+async function filterProducts() {
+  const category = this.dataset.category;
+  const res = await filterByCategory(category);
 
-  criarProdutos.listaProdutos(filtrados);
+  createProducts.listProducts(res);
 }
 
-async function filtrarPorcategoria(categoria) {
-  let lista = await conectaApi.listaDeProdutos;
-  let listaFiltrada = lista.filter(produto => produto.categoria == categoria);
-  return listaFiltrada;
+async function filterByCategory(category) {
+  let list = await productService.listProducts;
+  let result = list.filter((product) => product.category == category);
+  return result;
 }

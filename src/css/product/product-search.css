@@ -1,0 +1,15 @@
+.product__search {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .product__search {
+    grid-column-end: 4;
+  }
+}

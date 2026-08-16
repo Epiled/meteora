@@ -1,23 +1,37 @@
 :root {
   font-size: 62.5%;
 
-  --cor-principal: #000;
-  --cor-principal-claro: #CCC;
-  --cor-logo: #DAFF01;
-  --cor-principal-alt: #8E4DFF;
-  --cor-principal-hover: #350f77;
+  /* Brand Colors */
+  --color-brand-primary: #000000;
+  --color-brand-primary-light: #cccccc;
+  --color-brand-secondary: #8e4dff;
+  --color-brand-secondary-hover: #350f77;
+  --color-brand-accent: #daff01;
 
-  --cor-fonte: #6C757D;
+  /* Complementary / Support Colors */
+  --color-brand-complementary-1: #ee6471;
+  --color-brand-complementary-2: #f87f46;
+  --color-brand-complementary-3: #75d7f0;
 
-  --cor-fundo-1: #FFF;
-  --cor-fundo-menu-mobile: #343A40;
+  /* Borders & Dividers */
+  --color-border-default: #dee2e6;
+  --color-border-subtle: #d8d8d8;
 
-  --cor-complementar-1: #EE6471;
-  --cor-complementar-2: #F87F46;
+  /* Text & Typography */
+  --color-text-heading: #212529;
+  --color-text-primary: #6c757d;
+  --color-text-disabled: #adb5bd;
 
-  --cor-titulo: #212529;
+  /* Surfaces & Backgrounds */
+  --color-surface-base: #ffffff;
+  --color-surface-mobile-menu: #343a40;
+  --color-surface-light: #f3f6f7;
 
-  font-family: 'Fira Sans', sans-serif;
+  /* Shadows & Overlays */
+  --color-shadow-base: #2c3f5859;
+  --color-shadow-subtle: #00000021;
+
+  font-family: "Fira Sans", sans-serif;
 }
 
 * {
@@ -29,9 +43,3 @@ img {
   width: 100%;
   height: auto;
 }
-
-
-
-
-
-

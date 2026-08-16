@@ -1,202 +1,206 @@
-const BANNER = document.querySelector('[data-banner]');
-const BANNER_SLIDES = BANNER.querySelectorAll('[data-banner-slide]');
-const BANNER_IMAGENS = BANNER.querySelectorAll('[data-banner-imagem]');
-const TEMPO_SLIDE = parseInt(BANNER.dataset.timeSlide);
-const TEMPO_TRANSICAO = parseInt(BANNER.dataset.timeTransicao);
-const SLIDES_QTD = BANNER_SLIDES.length;
-const BANNER_SETAS = BANNER.querySelectorAll('[data-banner-seta]');
-const BANNER_INDICES = BANNER.querySelector('[data-banner-indices]');
-let indicadores = [];
-let indiceAtual;
-let indiceNovo;
+const BANNER = document.querySelector("[data-banner]");
+const BANNER_SLIDES = BANNER.querySelectorAll("[data-banner-slide]");
+const BANNER_IMAGES = BANNER.querySelectorAll("[data-banner-image]");
+const TIMEOUT_SLIDE = parseInt(BANNER.dataset.timeSlide);
+const TIMEOUT_TRANSITION = parseInt(BANNER.dataset.timeTransition);
+const SLIDES_QUANTITY = BANNER_SLIDES.length;
+const BANNER_ARROWS = BANNER.querySelectorAll("[data-banner-arrow]");
+const BANNER_INDEXES = BANNER.querySelector("[data-banner-indexes]");
 
-window.onload = () => preparaBanner();
+let indicators = [];
+let currentIndicator;
+let newIndicator;
 
-preparaSlide(BANNER_SLIDES);
+window.onload = () => prepareBanner();
 
-BANNER_IMAGENS.forEach(imagem => {
-  imagem.addEventListener('load', preparaBanner)
+prepareSlide(BANNER_SLIDES);
+
+BANNER_IMAGES.forEach((image) => {
+  image.addEventListener("load", prepareBanner);
 });
 
-BANNER_SETAS.forEach(seta => {
-  seta.addEventListener('click', (e) => {
-    passaSlide(e.target);
-  })
+BANNER_ARROWS.forEach((seta) => {
+  seta.addEventListener("click", (e) => {
+    passSlide(e.target);
+  });
 });
 
-window.addEventListener("resize", preparaBanner);
+window.addEventListener("resize", prepareBanner);
 
-let autoSlide = setInterval(proximoSlide, TEMPO_SLIDE);
+let autoSlide = setInterval(nextSlide, TIMEOUT_SLIDE);
 
-BANNER.addEventListener('mouseover', stopSlides);
+BANNER.addEventListener("mouseover", stopSlides);
 
-BANNER.addEventListener('mouseleave', () => {
-  return autoSlide = setInterval(proximoSlide, TEMPO_SLIDE);
+BANNER.addEventListener("mouseleave", () => {
+  return (autoSlide = setInterval(nextSlide, TIMEOUT_SLIDE));
 });
 
 function stopSlides() {
   clearInterval(autoSlide);
 }
 
-function passaSlide(direcao) {
-  if (direcao.dataset.bannerSeta == 'voltar') {
-    voltarSlide();
+function passSlide(direction) {
+  if (direction.dataset.bannerSeta == "back") {
+    backSlide();
     return;
   }
-  proximoSlide();
+  nextSlide();
 }
 
-function proximoSlide() {
-
-    BANNER_SLIDES.forEach((slide) => {
-      let posicao = parseFloat(slide.style.left);
-      let novaPosicao;
-
-      slideAtivo(slide);
-
-      slide.dataset.estado = '';
-
-      if (posicao < 0) {
-        novaPosicao = ((SLIDES_QTD - 2) * 100) + '%';
-      } else {
-        novaPosicao = (posicao - 100) + '%';
-      }
-      slide.style.left = novaPosicao;
-
-      controleEstado(slide, novaPosicao, 'proximo');
-    });
-
-  destacaIndice(indiceAtual, indiceNovo);
-}
-
-function voltarSlide() {
-
+function nextSlide() {
   BANNER_SLIDES.forEach((slide) => {
-    let posicao = parseFloat(slide.style.left);
-    let novaPosicao;
+    let position = parseFloat(slide.style.left);
+    let newPosition;
 
-    slideAtivo(slide);
+    slideActive(slide);
 
-    slide.dataset.estado = '';
+    slide.dataset.state = "";
 
-    if (posicao == (SLIDES_QTD - 2) * 100) {
-      novaPosicao = -100 + '%';
+    if (position < 0) {
+      newPosition = (SLIDES_QUANTITY - 2) * 100 + "%";
     } else {
-      novaPosicao = (posicao + 100) + '%';
+      newPosition = position - 100 + "%";
     }
-    slide.style.left = novaPosicao;
+    slide.style.left = newPosition;
 
-    controleEstado(slide, novaPosicao, 'voltar');
+    controlState(slide, newPosition, "next");
   });
 
-  destacaIndice(indiceAtual, indiceNovo);
+  highlightIndex(currentIndicator, newIndicator);
 }
 
-function controleEstado(slide, posicao, sentido) {
-  if (sentido == 'proximo') {
-    if (parseInt(posicao) < 0) {
-      slide.style.zIndex = '-1';
-    } else if (parseInt(posicao) === 0) {
-      slide.dataset.estado = 'ativo';
-      slide.style.zIndex = '0';
-      indiceNovo = slide.dataset.indiceSlide;
+function backSlide() {
+  BANNER_SLIDES.forEach((slide) => {
+    let position = parseFloat(slide.style.left);
+    let newPosition;
+
+    slideActive(slide);
+
+    slide.dataset.state = "";
+
+    if (position == (SLIDES_QUANTITY - 2) * 100) {
+      newPosition = -100 + "%";
     } else {
-      slide.style.zIndex = '-2';
+      newPosition = position + 100 + "%";
+    }
+    slide.style.left = newPosition;
+
+    controlState(slide, newPosition, "back");
+  });
+
+  highlightIndex(currentIndicator, newIndicator);
+}
+
+function controlState(slide, position, way) {
+  if (way == "next") {
+    if (parseInt(position) < 0) {
+      slide.style.zIndex = "-1";
+    } else if (parseInt(position) === 0) {
+      slide.dataset.state = "active";
+      slide.style.zIndex = "0";
+      newIndicator = slide.dataset.indexSlide;
+    } else {
+      slide.style.zIndex = "-2";
     }
   } else {
-    if (parseInt(posicao) < 0) {
-      slide.style.zIndex = '-2';
-    } else if (parseInt(posicao) === 0) {
-      slide.dataset.estado = 'ativo';
-      slide.style.zIndex = '0';
-      indiceNovo = slide.dataset.indiceSlide;
+    if (parseInt(position) < 0) {
+      slide.style.zIndex = "-2";
+    } else if (parseInt(position) === 0) {
+      slide.dataset.state = "active";
+      slide.style.zIndex = "0";
+      newIndicator = slide.dataset.indexSlide;
     } else {
-      slide.style.zIndex = '-1';
+      slide.style.zIndex = "-1";
     }
   }
 }
 
-function slideAtivo(slide) {
-  if(slide.dataset.estado === 'ativo') {
-    return indiceAtual = slide.dataset.indiceSlide;
+function slideActive(slide) {
+  if (slide.dataset.state === "active") {
+    return (currentIndicator = slide.dataset.indexSlide);
   }
 }
 
-function criaIndicadores() {
-  const LARGURA = 30;
-  const ALTURA = 3;
+function createIndicators() {
+  const WIDTH = 30;
+  const HEIGHT = 3;
   const GAP = 3;
 
-  for (let i = 0; i < SLIDES_QTD; i++) {
-    let posicao = (LARGURA + GAP * 2) * i;
-    let indicador = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    indicador.classList.add('banner__indice');
+  for (let i = 0; i < SLIDES_QUANTITY; i++) {
+    let position = (WIDTH + GAP * 2) * i;
+    let indicator = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "rect",
+    );
+    indicator.classList.add("banner__index");
 
-    indicador.style.transform = `matrix(1, 0, 0, -1, ${posicao}, ${GAP})`;
-    indicador.dataset.indice = i;
-    indicador.dataset.indicadorEstado = '';
+    indicator.style.transform = `matrix(1, 0, 0, -1, ${position}, ${GAP})`;
+    indicator.dataset.index = i;
+    indicator.dataset.indicatorState = "";
 
-    if(BANNER_SLIDES[i].dataset.estado == 'ativo') indicador.dataset.indicadorEstado = 'ativo';
+    if (BANNER_SLIDES[i].dataset.state == "active")
+      indicator.dataset.indicatorState = "active";
 
-    indicador.addEventListener('click', (e) => {
-      moveToSlide(e.target.dataset.indice, BANNER_SLIDES);
+    indicator.addEventListener("click", (e) => {
+      moveToSlide(e.target.dataset.index, BANNER_SLIDES);
     });
 
-    indicadores.push(indicador);
+    indicators.push(indicator);
   }
 
-  indicadores.forEach(item => BANNER_INDICES.appendChild(item))
+  indicators.forEach((item) => BANNER_INDEXES.appendChild(item));
 }
 
-criaIndicadores();
+createIndicators();
 
-function moveToSlide(indice, slides) {
-  let slideAtivo;
+function moveToSlide(index, slides) {
+  let slideActive;
   slides.forEach((slide, index) => {
-    let slideEstado = slide.dataset.estado;
-    if (slideEstado == 'ativo') {
-      slideAtivo = index;
+    let slideState = slide.dataset.state;
+    if (slideState == "active") {
+      slideActive = index;
     }
   });
 
-  let sentido;
-  let novaPosicao = Math.abs(slideAtivo - indice);
+  let way;
+  let newPosition = Math.abs(slideActive - index);
 
-  if (slideAtivo < indice) {
-    sentido = -1;
-  } else if (slideAtivo >= indice) {
-    sentido = 1;
+  if (slideActive < index) {
+    way = -1;
+  } else if (slideActive >= index) {
+    way = 1;
   }
 
-  for (let i = 0; i < novaPosicao; i++) {
-    if (sentido < 0) {
-      proximoSlide();
+  for (let i = 0; i < newPosition; i++) {
+    if (way < 0) {
+      nextSlide();
     } else {
-      voltarSlide();
+      backSlide();
     }
   }
 
-  destacaIndice(slideAtivo, indice);
+  highlightIndex(slideActive, index);
 }
 
-function destacaIndice(ultimoAtivo, novoAtivo) {
-  indicadores[ultimoAtivo].dataset.indicadorEstado = '';
-  indicadores[novoAtivo].dataset.indicadorEstado = 'ativo';
+function highlightIndex(lastActive, newActive) {
+  indicators[lastActive].dataset.indicatorState = "";
+  indicators[newActive].dataset.indicatorState = "active";
 }
 
-function preparaBanner() {
-  BANNER.style.height = ((BANNER_IMAGENS[0].clientHeight * 100) / window.screen.height) + 'vh';
+function prepareBanner() {
+  BANNER.style.height =
+    (BANNER_IMAGES[0].clientHeight * 100) / window.screen.height + "vh";
 }
 
-function preparaSlide(slides) {
+function prepareSlide(slides) {
   return slides.forEach((slide, index) => {
-    slide.dataset.indiceSlide = index;
-    slide.style.transition = `left ${TEMPO_TRANSICAO / 1000}s`;
+    slide.dataset.indexSlide = index;
+    slide.style.transition = `left ${TIMEOUT_TRANSITION / 1000}s`;
 
-    if (index == (slides.length - 1)) {
-      slide.style.left = '-100%';
+    if (index == slides.length - 1) {
+      slide.style.left = "-100%";
       return;
     }
-    slide.style.left = (index * 100) + '%';
-  })
+    slide.style.left = index * 100 + "%";
+  });
 }

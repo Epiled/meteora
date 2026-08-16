@@ -1,0 +1,13 @@
+.ease__containers {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 3.2rem;
+  gap: 3.2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .ease__containers {
+    margin-top: 4rem;
+    flex-direction: row;
+  }
+}

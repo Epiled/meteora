@@ -1,0 +1,12 @@
+.banner__index {
+  fill: var(--color-surface-base);
+  fill-opacity: 0.5;
+  width: 3rem;
+  height: 0.3rem;
+  text-anchor: middle;
+}
+
+.banner__index[data-indicator-state="active"] {
+  fill: var(--color-surface-base);
+  fill-opacity: 1;
+}

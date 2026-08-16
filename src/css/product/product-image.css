@@ -1,0 +1,4 @@
+.product__image {
+  vertical-align: bottom;
+  object-fit: cover;
+}

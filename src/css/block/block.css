@@ -1,0 +1,21 @@
+.block {
+  padding: 2.4rem 2.6rem;
+}
+
+.block--alt {
+  background-color: var(--color-brand-primary);
+  padding: 3.2rem 2.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .block {
+    padding: 4rem 3.9rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

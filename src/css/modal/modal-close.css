@@ -1,0 +1,10 @@
+.modal__close {
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-left: auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+}

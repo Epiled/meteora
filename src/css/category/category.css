@@ -1,0 +1,10 @@
+.category {
+  cursor: pointer;
+  box-shadow: 0 0 0 0 var(--color-brand-secondary);
+  transition: all 0.25s;
+}
+
+.category:hover {
+  box-shadow: 0 0 1.5rem 0.25rem var(--color-brand-secondary-hover);
+  transform: scale(1.1);
+}

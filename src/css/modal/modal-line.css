@@ -1,0 +1,17 @@
+.modal__line {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: 0.3rem;
+  border-radius: 1rem;
+  background: var(--color-brand-accent);
+  background: var(--color-text-primary);
+}
+
+.modal__line[data-modal-line]:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.modal__line[data-modal-line]:nth-child(2) {
+  transform: rotate(-45deg);
+}

@@ -1,7 +1,7 @@
 .newsletter {
   padding: 2.4rem 1.6rem;
-  border: .1rem solid var(--cor-principal);
-  color: var(--cor-titulo);
+  border: 0.1rem solid var(--color-brand-primary);
+  color: var(--color-text-heading);
   text-align: center;
   font-size: 1.6rem;
   line-height: 2.3rem;

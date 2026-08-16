@@ -1,0 +1,12 @@
+.newsletter__button {
+  padding: 1rem 1.7rem;
+  border: 0;
+  background-color: var(--color-brand-secondary);
+  color: var(--color-surface-base);
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.newsletter__button:hover {
+  background-color: var( --color-brand-secondary-hover);
+}

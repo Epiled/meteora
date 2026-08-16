@@ -1,9 +1,0 @@
-.rodape__quebra {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .rodape__quebra {
-    display: initial;
-  }
-}

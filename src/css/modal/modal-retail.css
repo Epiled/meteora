@@ -1,0 +1,7 @@
+.modal__retail {
+  color: var(--color-text-disabled);
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 0.1rem solid var(--color-border-subtle);
+}

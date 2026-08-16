@@ -1,0 +1,15 @@
+.product__button {
+  background-color: var(--color-brand-secondary);
+  color: var(--color-surface-base);
+  padding: 0.9rem 1.6rem;
+  font-size: 1.6rem;
+  line-height: normal;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.product__button:hover {
+  background-color: var(--color-brand-secondary-hover);
+}

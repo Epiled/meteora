@@ -1,0 +1,36 @@
+.modal__input {
+  outline: none;
+  appearance: unset;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 0.1rem solid #dee2e6;
+  border-radius: 50%;
+  position: relative;
+  margin: 0;
+}
+
+.modal__input:checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.3rem solid var(--color-brand-secondary);
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 50%;
+  box-shadow: 0rem 0rem 0rem 0.15rem var(--color-border-default);
+}
+
+.modal__input--offwhite {
+  background: var(--color-surface-light);
+}
+
+.modal__input--black {
+  background: var(--color-brand-primary);
+}
+
+.modal__input--blue-light {
+  background: var(--color-brand-complementary-3);
+}
