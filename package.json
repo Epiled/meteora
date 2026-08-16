@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "dev": "browser-sync start --server src --files '*.html, css/*.css, js/*.js'"
+  },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
